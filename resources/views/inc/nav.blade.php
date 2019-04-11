@@ -9,8 +9,14 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         @auth
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/home">Sales</a>
+            <li class="nav-item">
+                <a class="nav-link" href="/product">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/cart">My Cart</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/order">My Orders</a>
             </li>
         </ul>
         <ul class="navbar-nav">
@@ -21,6 +27,7 @@
                     <a class="dropdown-item" href="/account">Change Password</a>
                     @can('admin')
                         <a class="dropdown-item" href="/admin">All Users</a>                        
+                        <a class="dropdown-item" href="/product/create">New Product</a>                        
                     @endcan
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

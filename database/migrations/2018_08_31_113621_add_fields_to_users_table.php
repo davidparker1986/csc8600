@@ -16,7 +16,6 @@ class AddFieldsToUsersTable extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('phone', 11)->unique();
             $table->string('address')->nullable();
-            $table->string('nid')->nullable();
             $table->string('role', 50)->default("user");
             $table->boolean('isActive')->default(1);
         });

@@ -17,7 +17,6 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('123456'),
             'phone' => '01612404200',
             'address' => 'Dhaka, Bangladesh',
-            'nid' => '199801612404200',
             'role' => 'admin',
             'isActive' => '1',
         ]);

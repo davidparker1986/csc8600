@@ -24,7 +24,7 @@
                                 @endif
                             </div>
                         </div>
-
+                        @can('admin')
                         <div class="form-group row">
                             <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
 
@@ -41,7 +41,9 @@
                                 @endif
                             </div>
                         </div>
-
+                        @else
+                            <input id="role" type="hidden"  name="role" value="user">
+                        @endcan
                         <div class="form-group row">
                             <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
 
@@ -79,20 +81,6 @@
                                 @if ($errors->has('phone'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('phone') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="nid" class="col-md-4 col-form-label text-md-right">{{ __('NID') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="nid" type="text" class="form-control{{ $errors->has('nid') ? ' is-invalid' : '' }}" name="nid" value="{{ old('nid') }}" required>
-
-                                @if ($errors->has('nid'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('nid') }}</strong>
                                     </span>
                                 @endif
                             </div>

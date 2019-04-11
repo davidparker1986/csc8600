@@ -38,8 +38,6 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
-        $this->middleware('CheckAdmin');
     }
 
     /**
@@ -52,11 +50,10 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|string|max:255',
-            'role' => 'required|string|max:50',
+            'role' => 'nullable|string|max:50',
             'address' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|nullable|unique:users',
             'phone' => 'required|numeric|digits:11|unique:users',
-            'nid' => 'required|numeric|nullable',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -75,7 +72,6 @@ class RegisterController extends Controller
             'address' => $data['address'],
             'email' => $data['email'],
             'phone' => $data['phone'],
-            'nid' => $data['nid'],
             'password' => Hash::make($data['password']),
         ]);
 

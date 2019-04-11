@@ -18,8 +18,6 @@ class DashboardController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('IsActive');
-        $this->middleware('CheckAdmin');
     }
     /**
      * Display a listing of the resource.
