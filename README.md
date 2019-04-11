@@ -8,7 +8,17 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Setup
 
-Setup instructions go here.
+First install git from https://git-scm.com/downloads
+Open a terminal and type "git --version" and ensure it returns a version number. This confirms it has installed and is working correctly.
+
+Next install Node from https://nodejs.org/en/download/
+Open a terminal and type "npm --version" and ensure it returns a version number. This confirms it has installed and is working correctly.
+
+Next install Composer from https://getcomposer.org/download/
+Open a terminal and type "composer --version" and ensure it returns a version number. This confirms it has installed and is working correctly.
+
+Next clone the repo. Open a terminal and navigate to the directory where you would like to save the project. Now type "git clone https://github.com/davidparker1986/csc8600"
+
 
 ## Deployment
 
