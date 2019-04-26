@@ -8,7 +8,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Setup
 
-First install git from https://git-scm.com/downloads
+First you need to install PHP on your system, the easiest way I found was to install WAMP. http://www.wampserver.com/en/
+
+Next install git from https://git-scm.com/downloads
 Open a terminal and type "git --version" and ensure it returns a version number. This confirms it has installed and is working correctly.
 
 Next install Node from https://nodejs.org/en/download/
